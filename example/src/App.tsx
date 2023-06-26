@@ -1,18 +1,34 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import { multiply } from 'react-native-popup-message';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<number | undefined>(0);
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const multiplyhandle = () => {
+    multiply(Math.random(), Math.random()).then(setResult);
+  };
+
+  const resethandle = () => {
+    setResult(0);
+  };
 
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
+      <Button
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+        title="multiply"
+        onPress={multiplyhandle}
+      />
+      <Button
+        color="red"
+        accessibilityLabel="Learn more about this purple button"
+        title="reset"
+        onPress={resethandle}
+      />
     </View>
   );
 }

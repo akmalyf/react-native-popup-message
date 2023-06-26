@@ -8,7 +8,9 @@ customizable popup message for react native
 npm install react-native-popup-message
 ```
 
-## Usage
+# SOON :)
+
+<!-- ## Usage
 
 ```js
 import { multiply } from 'react-native-popup-message';
@@ -16,7 +18,7 @@ import { multiply } from 'react-native-popup-message';
 // ...
 
 const result = await multiply(3, 7);
-```
+``` -->
 
 ## Contributing
 
